@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {DynamicTableComponent} from '../dynamic-table/dynamic-table.component';
+import tableData from '../../assets/data.json';
 
 @Component({
   selector: 'app-expandable-table',
@@ -18,47 +19,7 @@ export class ExpandableTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.tableData = [
-        {
-          "id": "1",
-          "text1": "text 1.1",
-          "text2": "text 1.2",
-          "children": []
-        },
-        {
-          "id": "2",
-          "text1": "text 2.1",
-          "text2": "text 2.2",
-          "children": [
-            {
-              "id": "2.1",
-              "text1": "text 2.1.1",
-              "text2": "text 2.1.2",
-              "children": [
-                {
-                  "id": "2.1.1",
-                  "text1": "text 2.1.1.1",
-                  "text2": "text 2.1.1.2",
-                  "children": [{
-                  "id": "2.1.1",
-                  "text1": "text 2.1.1.1.1",
-                  "text2": "text 2.1.1.1.2",
-                  "children": []
-                }]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "4",
-          "text1": "text 4.1",
-          "text2": "text 4.2",
-          "children": [{"id": "4.1",
-              "text1": "text 4.1.1",
-              "text2": "text 4.1.2"}]
-        }
-      ];
+    this.tableData = tableData.rows;
     }
 
 expandedRows: Set<string> = new Set<string>();
