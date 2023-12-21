@@ -1,0 +1,29 @@
+.selected {
+    background-color: lightblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr.expandable {
+    cursor: pointer;
+}
+
+tr.clicked {
+    background-color: lightcoral;
+}
