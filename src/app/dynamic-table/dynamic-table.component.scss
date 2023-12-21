@@ -1,5 +1,5 @@
 .selected {
-    background-color: lightblue;
+    background-color: lightgreen;
 }
 
 table {
@@ -19,11 +19,6 @@ td {
 th {
     background-color: #f2f2f2;
 }
-
-tr.expandable {
+tr:hover {
     cursor: pointer;
-}
-
-tr.clicked {
-    background-color: lightcoral;
 }

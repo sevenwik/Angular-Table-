@@ -16,6 +16,7 @@
       *ngIf="isRowSelected(row.id) && row.children && row.children.length > 0"
     >
       <td colspan="3">
+        <!--I have made recursive call that calls the same component which helps to render any number of levels in the rows-->
         <app-dynamic-table
           [data]="row.children"
           [toggleRow]="toggleRow"
