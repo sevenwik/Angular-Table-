@@ -2,5 +2,7 @@
 
 Dynamic expandable angular table
 
-Output
+
+Output:
+
 ![plot](./Output.png)
