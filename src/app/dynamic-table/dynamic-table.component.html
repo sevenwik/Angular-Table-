@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Text 1</th>
+      <th>Text 2</th>
+    </tr>
+  </thead>
+  <ng-container *ngFor="let row of data; let i = index">
+    <tr (click)="toggleRow(row.id)" [class.selected]="isRowSelected(row.id)">
+      <td>{{ row.id }}</td>
+      <td>{{ row.text1 }}</td>
+      <td>{{ row.text2 }}</td>
+    </tr>
+    <tr
+      *ngIf="isRowSelected(row.id) && row.children && row.children.length > 0"
+    >
+      <td colspan="3">
+        <app-dynamic-table
+          [data]="row.children"
+          [toggleRow]="toggleRow"
+          [isRowSelected]="isRowSelected"
+        ></app-dynamic-table>
+      </td>
+    </tr>
+  </ng-container>
+</table>
